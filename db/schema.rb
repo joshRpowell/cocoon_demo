@@ -9,11 +9,11 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111014204318) do
+ActiveRecord::Schema.define(version: 20111014204318) do
 
-  create_table "people", :force => true do |t|
+  create_table "people", force: true do |t|
     t.string   "name"
     t.string   "role"
     t.string   "description"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(:version => 20111014204318) do
     t.datetime "updated_at"
   end
 
-  create_table "project_tags", :force => true do |t|
+  create_table "project_tags", force: true do |t|
     t.integer  "project_id"
     t.integer  "tag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "projects", :force => true do |t|
+  create_table "projects", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20111014204318) do
     t.integer  "owner_id"
   end
 
-  create_table "sub_tasks", :force => true do |t|
+  create_table "sub_tasks", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.boolean  "done"
@@ -46,13 +46,13 @@ ActiveRecord::Schema.define(:version => 20111014204318) do
     t.datetime "updated_at"
   end
 
-  create_table "tags", :force => true do |t|
+  create_table "tags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tasks", :force => true do |t|
+  create_table "tasks", force: true do |t|
     t.string   "name"
     t.string   "description"
     t.integer  "project_id"
